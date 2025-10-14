@@ -1,0 +1,14 @@
+D:\Umesh\Multicasting\Client\Client\bin\Debug\net8.0\Client.exe
+D:\Umesh\Multicasting\Client\Client\bin\Debug\net8.0\Client.deps.json
+D:\Umesh\Multicasting\Client\Client\bin\Debug\net8.0\Client.runtimeconfig.json
+D:\Umesh\Multicasting\Client\Client\bin\Debug\net8.0\Client.dll
+D:\Umesh\Multicasting\Client\Client\bin\Debug\net8.0\Client.pdb
+D:\Umesh\Multicasting\Client\Client\obj\Debug\net8.0\Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\Umesh\Multicasting\Client\Client\obj\Debug\net8.0\Client.AssemblyInfoInputs.cache
+D:\Umesh\Multicasting\Client\Client\obj\Debug\net8.0\Client.AssemblyInfo.cs
+D:\Umesh\Multicasting\Client\Client\obj\Debug\net8.0\Client.csproj.CoreCompileInputs.cache
+D:\Umesh\Multicasting\Client\Client\obj\Debug\net8.0\Client.dll
+D:\Umesh\Multicasting\Client\Client\obj\Debug\net8.0\refint\Client.dll
+D:\Umesh\Multicasting\Client\Client\obj\Debug\net8.0\Client.pdb
+D:\Umesh\Multicasting\Client\Client\obj\Debug\net8.0\Client.genruntimeconfig.cache
+D:\Umesh\Multicasting\Client\Client\obj\Debug\net8.0\ref\Client.dll
