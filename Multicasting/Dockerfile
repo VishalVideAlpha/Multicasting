@@ -16,10 +16,12 @@ RUN dotnet publish ./Client/Client.csproj -c Release -o /app/publish
 # Runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
 WORKDIR /app
+
+# Copy published app from build stage
 COPY --from=build /app/publish ./
 
-# Expose container port 5000
-EXPOSE 5000
+# Expose container port 86
+EXPOSE 86
 
 # Run the app
 ENTRYPOINT ["dotnet", "Client.dll"]
