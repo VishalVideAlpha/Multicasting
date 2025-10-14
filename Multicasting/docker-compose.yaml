@@ -7,6 +7,6 @@ services:
       dockerfile: Dockerfile
     container_name: client_app
     ports:
-      - "8086:5000"  # Host port 8086 -> Container port 5000
+      - "8086:86"  # Host port 8086 -> Container port 86
     environment:
       DOTNET_ENVIRONMENT: Development
