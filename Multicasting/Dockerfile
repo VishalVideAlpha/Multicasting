@@ -3,15 +3,12 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 
 WORKDIR /src
 
-# Copy csproj and restore dependencies
-COPY Client/Client.csproj ./Client/
-RUN dotnet restore ./Client/Client.csproj
-
-# Copy the rest of the source code
+# Copy the entire Client folder and restore dependencies
 COPY Client/ ./Client/
+RUN dotnet restore Client/Client.csproj
 
 # Publish the app
-RUN dotnet publish ./Client/Client.csproj -c Release -o /app/publish
+RUN dotnet publish Client/Client.csproj -c Release -o /app/publish
 
 # Runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
