@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  client:
+    build:
+      context: .          # Dockerfile is in the same folder
+      dockerfile: Dockerfile
+    container_name: client_app
+    ports:
+      - "8086:86"          # Host 8086 -> Container 86
+    environment:
+      DOTNET_ENVIRONMENT: Development
+    restart: unless-stopped
