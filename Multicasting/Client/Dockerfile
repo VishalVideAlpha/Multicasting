@@ -17,7 +17,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
 WORKDIR /app
 
 # Copy published files
-COPY --from=build /app/publish ./
+COPY --from=build /app/publish .
 
 # Expose port
 EXPOSE 86
