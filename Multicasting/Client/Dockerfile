@@ -1,26 +1,26 @@
-# ---------------- Build stage ----------------
+# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 
 # Copy project file and restore dependencies
-COPY Client/Client.csproj ./Client/
-RUN dotnet restore ./Client/Client.csproj
+COPY *.csproj ./
+RUN dotnet restore
 
-# Copy all source files
-COPY Client/ ./Client/
+# Copy the rest of the source code
+COPY . ./
 
 # Publish the project
-RUN dotnet publish ./Client/Client.csproj -c Release -o /app/publish
+RUN dotnet publish -c Release -o /app/publish
 
-# ---------------- Runtime stage ----------------
+# Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
 WORKDIR /app
 
-# Copy published files
+# Copy published files from build stage
 COPY --from=build /app/publish ./
 
-# Expose port
+# Expose port (use the port your app listens on)
 EXPOSE 86
 
-# Run the application
+# Run the app
 ENTRYPOINT ["dotnet", "Client.dll"]
