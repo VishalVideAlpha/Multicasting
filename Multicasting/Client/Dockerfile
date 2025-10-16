@@ -13,4 +13,3 @@ COPY --from=build /app/publish ./
 
 EXPOSE 86
 ENTRYPOINT ["dotnet", "Client.dll"]
-
