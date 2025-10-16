@@ -1,13 +1,8 @@
-version: '3.9'
+version: '3.8'
 
 services:
   client:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: client_app
+    build: .
+    container_name: multicasting-client
     ports:
-      - "8086:86"   # Host 8086 -> Container 86
-    environment:
-      DOTNET_ENVIRONMENT: Development
-    restart: unless-stopped
+      - "8086:86"
