@@ -3,9 +3,8 @@ version: '3.9'
 services:
   client:
     build:
-      context: .         # Dockerfile is in same folder
+      context: .       # Dockerfile is in the same folder
       dockerfile: Dockerfile
-    image: client:latest
     container_name: client_app
     ports:
       - "8086:86"
